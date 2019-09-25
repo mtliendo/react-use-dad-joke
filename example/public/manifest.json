@@ -1,0 +1,8 @@
+{
+  "short_name": "@mtliendo/react-use-dad-jokes",
+  "name": "@mtliendo/react-use-dad-jokes",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
