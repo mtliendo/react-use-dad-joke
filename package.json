@@ -1,6 +1,6 @@
 {
   "name": "@mtliendo/react-use-dad-joke",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom react hook for getting the best dad jokes!",
   "author": "mtliendo",
   "license": "MIT",
