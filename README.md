@@ -24,7 +24,7 @@ const App = () => {
 
   if (error) return "uh oh...something went wrong";
 
-  return <main>{dadJoke}</main>;
+  return <main>{dadJoke.joke}</main>;
 };
 ```
 
