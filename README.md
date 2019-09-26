@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save @mtliendo/react-use-dad-jokes
+npm install --save @mtliendo/react-use-dad-joke
 ```
 
 ## Usage
@@ -15,14 +15,17 @@ npm install --save @mtliendo/react-use-dad-jokes
 ```jsx
 import React, { Component } from 'react'
 
-import { useMyHook } from '@mtliendo/react-use-dad-jokes'
+import { useDadJoke } from '@mtliendo/react-use-dad-joke'
 
-const Example = () => {
-  const example = useMyHook()
-  return (
-    <div>{example}</div>
-  )
-}
+const App = () => {
+  const { isLoading, error, dadJoke } = useDadJoke();
+
+  if (isLoading) return "Loading...";
+
+  if (error) return "uh oh...something went wrong";
+
+  return <main>{dadJoke}</main>;
+};
 ```
 
 ## License
