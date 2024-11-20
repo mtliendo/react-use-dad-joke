@@ -1,6 +1,7 @@
 import * as React from "react";
 import { fetchDadJoke } from "./services/fetchDadJoke";
 
+console.log("hello from index.js");
 const dadJokeReducer = (state, action) => {
   switch (action.type) {
     case "isLoading":
@@ -17,7 +18,7 @@ const dadJokeReducer = (state, action) => {
 const initialState = {
   isLoading: true,
   error: null,
-  dadJoke: null
+  dadJoke: null,
 };
 export const useDadJoke = () => {
   const [dadJokeState, dispatch] = React.useReducer(
@@ -29,10 +30,10 @@ export const useDadJoke = () => {
     dispatch({ type: "hasError", error: null });
 
     fetchDadJoke()
-      .then(dadJoke => {
+      .then((dadJoke) => {
         dispatch({ type: "isLoading", isLoading: false, dadJoke });
       })
-      .catch(e => {
+      .catch((e) => {
         console.error(e.message);
         dispatch({ type: "isLoading", isLoading: false });
         dispatch({ type: "hasError", error: e.message });
